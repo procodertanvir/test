@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProcoderTanvir Webcam</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    
+    <video id="webCam" autoplay="true">
+      
+    </video>
+    
+    <script>
+      var video = document.getElementById("webCam");
+      var camera = navigator.mediaDevices.getUserMedia;
+      
+      if(camera){
+        navigator.mediaDevices.getUserMedia({
+          video: true,
+          audio: true
+        })
+        .then(function(streamLive){
+          video.srcObject=streamLive;
+        })
+        .catch(function(error){
+          console.log("error please try again");
+        })
+      }
+    </script>
+    
+  </body>
+</html>
