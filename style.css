@@ -1,23 +1,35 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 #webCam {
-  background-color: #82ccdd;
-  height: 1000px;
-  width: 1085px;
+  background-color: rebeccapurple;
+  height: 700px;
+  width: 700px;
 }
-h1{
-  text-align: center;
+
+#canvas{
+  background-color: blueviolet;
 }
-p{
-  text-align: center;
-  font-size: 25px;
-  background-color: #ff0000;
-  display: inline-block;
+
+#takePhoto {
+  background-color: blueviolet;
   padding: 10px;
-  border-radius: 6px;
-  margin: 0 45%;
-  width: 100px;
+  border-radius: 10px;
+  box-shadow: 2px 3px 10px burlywood;
+  color: #fafafa;
+  font-size: 1.5rem;
+  width: 200px;
+  margin: 0 50%;
 }
-h2{
-  background-color: #82ccdd;
-  text-align: center;
-  padding: 10px;
+
+/* ========= RESPONSIVE ========= */
+@media (max-width: 576px) {
+  #webCam{
+    height: 350px;
+  }
+  #canvas{
+    height: 490px;
+    width: 700px;
+  }
 }
