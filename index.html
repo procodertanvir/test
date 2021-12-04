@@ -9,17 +9,15 @@
   </head>
   <body>
     
-    <h3>Enjoy........ Enjoy........ Enjoy........ Enjoy</h3>
-    <h1>Just See</h1>
-    <p>Not moving? <b>Press</b> one time. like >👆</p>
-    
-    <video id="webCam" autoplay="true">
-      <h2> Cdfdf</h2>
-    </video>
-    <h2>Copyright © 2021 by <a href="https://www.instagram.com/procodertanvir/">Procoder Tanvir</a></h2>
-    <span style="color: blue;">New Features Coming Soon!</span>
-    
-    
+    <video id="webCam" autoplay="true"></video>
+
+    <canvas id="canvas" width="700" height="700">
+
+    </canvas>
+
+    <button id="takePhoto">
+      Take Photo
+    </button>
     
     <script>
       var video = document.getElementById("webCam");
@@ -37,6 +35,14 @@
           console.log("error please try again");
         })
       }
+
+      var canvas = document.getElementById("canvas");
+      var takePhoto = document.getElementById("takePhoto");
+
+      var context = canvas.getContext('2d');
+      takePhoto.addEventListener('click',function(){
+        context.drawImage(video,0,0,700,700)
+      })
     </script>
     
   </body>
